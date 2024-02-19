@@ -28,6 +28,7 @@ ul,li{
     width: 100%;
     margin: 0 auto;
     position: relative;
+    padding: 0 30px;
 
 }
 section{
@@ -104,3 +105,55 @@ section{
 .main .container{
     min-height: 100vh;
 }
+
+.main .title{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.main .title h2{
+    line-height: 1.9;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* End of main section */
+
+
+/* Button Class Main page */
+.title .btn{
+    border: 2px solid#fff;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s all ease-in-out;
+    padding: 5px 15px;
+}
+  .title .btn i{
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  
+  .title .btn::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background-color: #fff;
+    z-index: -1;
+  }
+  .title .btn:hover{
+    color: #1a1a1a;
+  }
+  .title .btn:hover::after{
+    width: 100%;
+  }
