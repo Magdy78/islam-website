@@ -3,157 +3,209 @@ font-family:'thuluth-decorated';
 font-family:'cairo-bold';
 ********/
 /***GlobalStyles***/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:'cairo-bold';
-    outline: none;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "cairo-bold";
+  outline: none;
 }
-::-webkit-scrollbar{
-    width: 0;
-}
-
-body{
-    direction: rtl;
-    scroll-behavior: smooth;
+::-webkit-scrollbar {
+  width: 0;
 }
 
-ul,li{
-    list-style: none;
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
 }
-.container{
-    max-width: 1450px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 30px;
 
+ul,
+li {
+  list-style: none;
 }
-section{
-    padding: 70px 0;
+.container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 30px;
 }
+section {
+  padding: 70px 0;
+}
+section h3 {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(31, 171, 0);
+  margin-bottom: 50px;
+  position: relative;
+}
+section h3::after,
+section h3::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(31, 171, 0);
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section h3::after {
+  width: 50px;
+  bottom: -10px;
+}
+section h3::before {
+  width: 100px;
+  bottom: 0px;
+}
+
 /***** Header********/
-.header{
-    position: fixed;
-    top:0;
-    left:0;
-    right: 0;
-    z-index: 1;
-    transition: .5s all ease-in-out;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.5s all ease-in-out;
 }
-.header .container
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    transition: .5s all ease-in-out;
-    color: rgb(255, 255, 255)
-
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  transition: 0.5s all ease-in-out;
+  color: rgb(255, 255, 255);
 }
-.header.active{
-    background-color: rgba(0,0,0,.6); 
+.header.active {
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.header.active .container{
-    height: 80px;
+.header.active .container {
+  height: 80px;
 }
-.header ul{
-    display: flex;
+.header ul {
+  display: flex;
 }
 .header ul li {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .header ul li::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    background-color: #ffffff;
-    height: 2px;
-    transition: width 0.3s ease-in-out;
-    width: 0;  /* Set initial width to zero */
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+  width: 0; /* Set initial width to zero */
 }
 
 .header ul li:hover::after {
-    width: 100%;  /* Expand width on hover */
+  width: 100%; /* Expand width on hover */
 }
 
-.header .bars{
-    display: none;
+.header .bars {
+  display: none;
 }
 .header li:not(:first-of-type),
-.header li:not(:last-of-type){
-    margin: 0 15px;
+.header li:not(:last-of-type) {
+  margin: 0 15px;
 }
-.header .logo{
-    font-family:'thuluth-decorated';
-    font-size: 55px;
-    cursor: pointer;
+.header .logo {
+  font-family: "thuluth-decorated";
+  font-size: 55px;
+  cursor: pointer;
 }
 /** main Section**/
 
-.main{
-    background: url(./images/1.png);
-    background-size: cover; /* Scale the background image to cover the entire container */
-    background-position: center; 
+.main {
+  background: url(./images/1.png);
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-position: center;
+}
+.main .container {
+  min-height: 100vh;
+}
 
+.main .title {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #fff;
 }
-.main .container{
-    min-height: 100vh;
-}
-
-.main .title{
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    color: #fff;
-}
-.main .title h2{
-    line-height: 1.9;
-    font-size: 40px;
-    margin-bottom: 30px;
+.main .title h2 {
+  line-height: 1.9;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 /* End of main section */
 
-
 /* Button Class Main page */
-.title .btn{
-    border: 2px solid#fff;
-    background: transparent;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 400;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    position: relative;
-    transition: .3s all ease-in-out;
-    padding: 5px 15px;
+.title .btn {
+  border: 2px solid#fff;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  padding: 5px 15px;
 }
-  .title .btn i{
-    font-size: 25px;
-    margin-right: 10px;
-  }
-  
-  .title .btn::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    transition: .3s all ease-in-out;
-    background-color: #fff;
-    z-index: -1;
-  }
-  .title .btn:hover{
-    color: #1a1a1a;
-  }
-  .title .btn:hover::after{
-    width: 100%;
-  }
+.title .btn i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.title .btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.3s all ease-in-out;
+  background-color: #fff;
+  z-index: -1;
+}
+.title .btn:hover {
+  color: #1a1a1a;
+}
+.title .btn:hover::after {
+  width: 100%;
+}
+
+/* Hadith Box CSS */
+.hadithContainer {
+  min-height: 350px;
+  position: relative;
+  box-shadow: 4px 4px 4px 0 #d1d9e6 inset, -4px -4px 4px 0px #d1d9e6 inset;
+  color: #232323;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+.hadithContainer .number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 20px;
+  color: rgb(31, 171, 0);
+  background: transparent;
+}
+.hadith .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hadith .buttons div {
+  background: linear-gradient(60deg, #66bb6a, #43e047);
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
