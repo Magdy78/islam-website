@@ -1,0 +1,106 @@
+/**********
+font-family:'thuluth-decorated';
+font-family:'cairo-bold';
+********/
+/***GlobalStyles***/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'cairo-bold';
+    outline: none;
+
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+body{
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+ul,li{
+    list-style: none;
+}
+.container{
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+section{
+    padding: 70px 0;
+}
+/***** Header********/
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1;
+    transition: .5s all ease-in-out;
+}
+.header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    transition: .5s all ease-in-out;
+    color: rgb(255, 255, 255)
+
+}
+.header.active{
+    background-color: rgba(0,0,0,.6); 
+}
+.header.active .container{
+    height: 80px;
+}
+.header ul{
+    display: flex;
+}
+.header ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+.header ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    height: 2px;
+    transition: width 0.3s ease-in-out;
+    width: 0;  /* Set initial width to zero */
+}
+
+.header ul li:hover::after {
+    width: 100%;  /* Expand width on hover */
+}
+
+.header .bars{
+    display: none;
+}
+.header li:not(:first-of-type),
+.header li:not(:last-of-type){
+    margin: 0 15px;
+}
+.header .logo{
+    font-family:'thuluth-decorated';
+    font-size: 55px;
+    cursor: pointer;
+}
+/** main Section**/
+
+.main{
+    background: url(./images/1.png);
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; 
+
+}
+.main .container{
+    min-height: 100vh;
+}
