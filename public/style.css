@@ -190,14 +190,7 @@ section h3::before {
   justify-content: center;
   padding: 50px 20px;
 }
-.hadithContainer .number {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 10px 20px;
-  color: rgb(31, 171, 0);
-  background: transparent;
-}
+
 .hadith .buttons{
     display: flex;
     justify-content: space-between;
@@ -209,3 +202,9 @@ section h3::before {
   padding: 10px 20px;
   cursor: pointer;
 }
+.hadith .buttons .number {
+   
+    padding: 10px 20px;
+    color: rgb(31, 171, 0);
+    background: transparent;
+  }
