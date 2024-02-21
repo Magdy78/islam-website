@@ -1,18 +1,16 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
     let fixedNav = document.querySelector('.header');
     window.addEventListener("scroll", () => {
         window.scrollY > 100 ? fixedNav.classList.add("active") : fixedNav.classList.remove("active");
     });
     let exploreBtn = document.querySelector('.title .btn'),
-HadithSection =document.querySelector('.hadith');
+        HadithSection = document.querySelector('.hadith');
 
-exploreBtn.addEventListener('click',()=>{
-    HadithSection.scrollIntoView({ behavior:"smooth"})
-})
+    exploreBtn.addEventListener('click', () => {
+        HadithSection.scrollIntoView({ behavior: "smooth" })
+    })
 
-   // HadithSection
+    // HadithSection
     let hadithContainter = document.querySelector('.hadithContainer');
     let next = document.querySelector('.buttons .next');
     let prev = document.querySelector('.buttons .prev');
